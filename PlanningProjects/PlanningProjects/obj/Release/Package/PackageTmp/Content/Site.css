@@ -1,0 +1,90 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+.SearchPos
+{
+    margin-top:10px;
+  
+}
+.PrjLeft
+{
+     margin-top:60px;
+    float: left;
+}
+.lblRight{
+    text-align:right;
+    width:150px;
+    padding-right:15px;
+
+}
+.lblLeft{
+    text-align:left;
+}
+.lblMid{
+    text-align: left;
+    width:250px;
+    font-weight:bold;
+    color:red;
+}
+.lblMiddle
+{
+    text-align:center;
+    font-weight:bold;
+    font-size:16px;
+}
+.lblRight2{
+    text-align:right;
+    padding-right:15px;
+    vertical-align:top;
+}
+.lblLeft2{
+    text-align:left;
+    
+   vertical-align:top;
+}
+.lblRight3{
+        text-align:right;
+    width:150px;
+    padding-right:15px;
+    vertical-align:top;
+}
+.lblLeft3{
+    text-align:left;
+    width:150px;
+     vertical-align:top;
+}

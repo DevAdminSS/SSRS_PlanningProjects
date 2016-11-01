@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Planners" targetNamespace="http://tempuri.org/Planners.xsd" xmlns:mstns="http://tempuri.org/Planners.xsd" xmlns="http://tempuri.org/Planners.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PlanningPrjConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PlanningPrjConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PlanningPrjConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DevPermitsTableAdapter" GeneratorDataComponentClassName="DevPermitsTableAdapter" Name="DevPermits" UserDataComponentName="DevPermitsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PlanningPrjConnectionString (Web.config)" DbObjectName="PlanningPrj.dbo.DevPermits" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select distinct Planner from DevPermits order by Planner</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Planner" DataSetColumn="Planner" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Planners" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Planners" msprop:Generator_UserDSName="Planners">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DevPermits" msprop:Generator_TableClassName="DevPermitsDataTable" msprop:Generator_TableVarName="tableDevPermits" msprop:Generator_TablePropName="DevPermits" msprop:Generator_RowDeletingName="DevPermitsRowDeleting" msprop:Generator_RowChangingName="DevPermitsRowChanging" msprop:Generator_RowEvHandlerName="DevPermitsRowChangeEventHandler" msprop:Generator_RowDeletedName="DevPermitsRowDeleted" msprop:Generator_UserTableName="DevPermits" msprop:Generator_RowChangedName="DevPermitsRowChanged" msprop:Generator_RowEvArgName="DevPermitsRowChangeEvent" msprop:Generator_RowClassName="DevPermitsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Planner" msprop:Generator_ColumnVarNameInTable="columnPlanner" msprop:Generator_ColumnPropNameInRow="Planner" msprop:Generator_ColumnPropNameInTable="PlannerColumn" msprop:Generator_UserColumnName="Planner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
